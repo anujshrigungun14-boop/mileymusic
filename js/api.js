@@ -1185,7 +1185,7 @@ export class LosslessAPI {
         try {
             const searchUrl = `https://musicbrainz.org/ws/2/artist/?query=artist:${encodeURIComponent(artistName)}&fmt=json`;
             const searchRes = await fetch(searchUrl, {
-                headers: { 'User-Agent': 'Monochrome/2.0.0 ( https://github.com/monochrome-music/monochrome )' },
+                headers: { 'User-Agent': 'MiLey/2.0.0 ( https://github.com/miley-music/miley )' },
             });
             const searchData = await searchRes.json();
 
@@ -1196,7 +1196,7 @@ export class LosslessAPI {
 
             const detailsUrl = `https://musicbrainz.org/ws/2/artist/${mbid}?inc=url-rels&fmt=json`;
             const detailsRes = await fetch(detailsUrl, {
-                headers: { 'User-Agent': 'Monochrome/2.0.0 ( https://github.com/monochrome-music/monochrome )' },
+                headers: { 'User-Agent': 'MiLey/2.0.0 ( https://github.com/miley-music/miley )' },
             });
             const detailsData = await detailsRes.json();
 
@@ -2060,7 +2060,7 @@ export class LosslessAPI {
         if (this.turnstileLoadPromise) return this.turnstileLoadPromise;
 
         this.turnstileLoadPromise = new Promise((resolve, reject) => {
-            const existing = document.querySelector('script[data-monochrome-turnstile]');
+            const existing = document.querySelector('script[data-miley-turnstile]');
             if (existing) {
                 existing.addEventListener('load', () => resolve(window.turnstile), { once: true });
                 existing.addEventListener('error', () => reject(new Error('Failed to load Turnstile')), {
@@ -2073,7 +2073,7 @@ export class LosslessAPI {
             script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
             script.async = true;
             script.defer = true;
-            script.dataset.monochromeTurnstile = 'true';
+            script.dataset.mileyTurnstile = 'true';
             script.onload = () => resolve(window.turnstile);
             script.onerror = () => reject(new Error('Failed to load Turnstile'));
             document.head.appendChild(script);

@@ -146,7 +146,7 @@
     --font-family: var(--font-family-ja);
 }
 
-:root[data-theme='monochrome'] {
+:root[data-theme='miley'] {
     color-scheme: dark;
 
     --background: #0a0a0a;

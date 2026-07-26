@@ -2,14 +2,14 @@
 import { createAuthClient } from 'https://esm.sh/better-auth/client';
 
 const getBaseURL = () => {
-    const local = localStorage.getItem('monochrome-auth-url');
+    const local = localStorage.getItem('miley-auth-url');
     if (local) return local;
 
     if (window.__AUTH_URL__) return window.__AUTH_URL__;
 
     const hostname = window.location.hostname;
-    if (hostname.endsWith('monochrome.tf') || hostname === 'monochrome.tf') {
-        return 'https://auth.monochrome.tf';
+    if (hostname.endsWith('miley.app') || hostname === 'miley.app') {
+        return 'https://auth.miley.app';
     }
     return 'https://auth.samidy.com';
 };

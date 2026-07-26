@@ -443,9 +443,9 @@ class CommandPalette {
                 id: 'theme-black',
                 group: 'Theme',
                 icon: 'moon',
-                label: 'Theme: Monochrome',
-                keywords: ['theme', 'monochrome', 'black', 'dark', 'amoled'],
-                action: () => this.setTheme('monochrome'),
+                label: 'Theme: MiLey',
+                keywords: ['theme', 'miley', 'black', 'dark', 'amoled'],
+                action: () => this.setTheme('miley'),
             },
             {
                 id: 'theme-dark',
@@ -1247,7 +1247,7 @@ class CommandPalette {
         }
 
         const { handleTrackAction } = await import('./events.js');
-        const scrobbler = window.monochromeScrobbler;
+        const scrobbler = window.mileyScrobbler;
 
         let likedCount = 0;
         await this.notify('Liking all tracks in queue...');

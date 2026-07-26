@@ -1,6 +1,6 @@
 export class MusicDatabase {
     constructor() {
-        this.dbName = 'MonochromeDB';
+        this.dbName = 'MiLeyDB';
         this.version = 11;
         this.db = null;
     }

@@ -90,7 +90,7 @@ class GeniusManager {
     // idgaf anymore im js hardcoding this lmaooo
     getToken() {
         const hostname = window.location.hostname;
-        if (hostname.endsWith('monochrome.tf') || hostname === 'monochrome.tf') {
+        if (hostname.endsWith('miley.app') || hostname === 'miley.app') {
             return 'OpITG-h86oehKYuJJ5QVY5F-HxUWXb31EwGKarx2Tle3W9rBUVnMaUL9qo_Oh9Q7';
         }
         return 'QmS9OvsS-7ifRBKx_ochIPQU7oejIS9Eo_z5iWHmCPyhwLVQID3pYTHJmJTa6z8z';
@@ -1021,10 +1021,10 @@ function applyFullscreenLyricsShadowTweaks(amLyrics, container) {
         const root = amLyrics.shadowRoot;
         if (!root) return false;
 
-        let styleEl = root.getElementById('monochrome-fullscreen-lyrics-tweaks');
+        let styleEl = root.getElementById('miley-fullscreen-lyrics-tweaks');
         if (!styleEl) {
             styleEl = document.createElement('style');
-            styleEl.id = 'monochrome-fullscreen-lyrics-tweaks';
+            styleEl.id = 'miley-fullscreen-lyrics-tweaks';
             root.appendChild(styleEl);
         }
 

@@ -98,12 +98,12 @@ class ServerAPI {
 
         console.error('Failed to load instances from all uptime APIs');
         return [
-            'https://eu-central.monochrome.tf',
-            'https://us-west.monochrome.tf',
-            'https://arran.monochrome.tf',
+            'https://eu-central.miley.app',
+            'https://us-west.miley.app',
+            'https://arran.miley.app',
             'https://triton.squid.wtf',
-            'https://api.monochrome.tf',
-            'https://monochrome-api.samidy.com',
+            'https://api.miley.app',
+            'https://miley-api.samidy.com',
             'https://maus.qqdl.site',
             'https://vogel.qqdl.site',
             'https://katze.qqdl.site',

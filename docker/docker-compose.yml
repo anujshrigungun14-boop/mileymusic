@@ -1,6 +1,6 @@
 services:
     # Production frontend -- always runs
-    monochrome:
+    miley:
         build:
             context: ..
             dockerfile: docker/Dockerfile
@@ -11,12 +11,12 @@ services:
                 - APPWRITE_PROJECT_ID=${APPWRITE_PROJECT_ID}
                 - POCKETBASE_URL=${POCKETBASE_URL}
                 - SESSION_MAX_AGE=${SESSION_MAX_AGE}
-        container_name: monochrome
+        container_name: miley
         ports:
-            - '${MONOCHROME_PORT:-3000}:4173'
+            - '${MILEY_PORT:-3000}:4173'
         restart: unless-stopped
         networks:
-            - monochrome-network
+            - miley-network
         healthcheck:
             test: ['CMD', 'wget', '--no-verbose', '--tries=1', '--spider', 'http://localhost:4173/']
             interval: 30s
@@ -27,7 +27,7 @@ services:
     # PocketBase backend -- only starts with: docker compose --profile pocketbase up -d
     pocketbase:
         image: ghcr.io/muchobien/pocketbase:latest
-        container_name: monochrome-pocketbase
+        container_name: miley-pocketbase
         profiles:
             - pocketbase
         restart: unless-stopped
@@ -49,27 +49,27 @@ services:
             retries: 3
             start_period: 30s
         networks:
-            - monochrome-network
+            - miley-network
 
     # Development server -- only starts with: docker compose --profile dev up -d
-    monochrome-dev:
+    miley-dev:
         build:
             context: ..
             dockerfile: docker/Dockerfile.dev
-        container_name: monochrome-dev
+        container_name: miley-dev
         profiles:
             - dev
         ports:
-            - '${MONOCHROME_DEV_PORT:-5173}:5173'
+            - '${MILEY_DEV_PORT:-5173}:5173'
         volumes:
             - ..:/app
             - /app/node_modules
         command: npm run dev -- --host 0.0.0.0
         networks:
-            - monochrome-network
+            - miley-network
 
 networks:
-    monochrome-network:
+    miley-network:
         driver: bridge
 
 volumes:

@@ -1,20 +1,20 @@
 > [!important]
 > April 30th, 2026: this file is currently outdated, as we have switched away from hifi-api (kinda), however were lowk too lazy right now, though it will be updated soon.
 
-# Monochrome Instances
+# MiLey Instances
 
-This document lists public instances of Monochrome that you can use. Instances are community-hosted versions of Monochrome that provide access to the application.
+This document lists public instances of MiLey that you can use. Instances are community-hosted versions of MiLey that provide access to the application.
 
 ---
 
 ## Official Instance
 
-The official Monochrome instance maintained by the core team:
+The official MiLey instance maintained by the core team:
 
 | URL                                                       | Status   | Notes            |
 | --------------------------------------------------------- | -------- | ---------------- |
-| [monochrome.tf](https://monochrome.tf)                    | Official | Primary instance |
-| [monochrome.samidy.com](https://monochrome.samidy.com)    | Official | Secondary mirror |
+| [miley.app](https://miley.app)                    | Official | Primary instance |
+| [miley.samidy.com](https://miley.samidy.com)    | Official | Secondary mirror |
 | [lossless.wtf](https://lossless.wtf)                      | Official | Failover mirror  |
 | [if-it-runs-ship-it.lol](https://if-it-runs-ship-it.lol/) | Official | Failover mirror  |
 
@@ -22,23 +22,23 @@ The official Monochrome instance maintained by the core team:
 
 ## Community Instances
 
-PLEASE do not use any rehost of monochrome and complain to us about features not working. They are usually out of date, and do not provide the latest features, and accounts are always broken.
+PLEASE do not use any rehost of miley and complain to us about features not working. They are usually out of date, and do not provide the latest features, and accounts are always broken.
 
 ## API Instances
 
-Monochrome uses the Hi-Fi API under the hood. Live, up-to-date status trackers (which return JSON) can be found below:
+MiLey uses the Hi-Fi API under the hood. Live, up-to-date status trackers (which return JSON) can be found below:
 
 - [https://tidal-uptime.geeked.wtf](https://tidal-uptime.geeked.wtf)
 
-These are available API endpoints that can be used with Monochrome or other Hi-Fi based applications:
+These are available API endpoints that can be used with MiLey or other Hi-Fi based applications:
 
 ### Official & Community APIs
 
 | Provider          | URL                                 | Notes                                                                                                  |
 | ----------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| **Monochrome**    | `https://monochrome-api.samidy.com` | Official API                                                                                           |
-|                   | `https://api.monochrome.tf`         | Official API                                                                                           |
-| **geeked.wtf**    | `https://hifi.geeked.wtf`           | Community hosted - uses the [TypeScript Rewrite](https://github.com/monochrome-music/hifi-api-workers) |
+| **MiLey**    | `https://miley-api.samidy.com` | Official API                                                                                           |
+|                   | `https://api.miley.app`         | Official API                                                                                           |
+| **geeked.wtf**    | `https://hifi.geeked.wtf`           | Community hosted - uses the [TypeScript Rewrite](https://github.com/miley-music/hifi-api-workers) |
 | **Lucida (QQDL)** | `https://wolf.qqdl.site`            | Community hosted                                                                                       |
 |                   | `https://maus.qqdl.site`            | Community hosted                                                                                       |
 |                   | `https://vogel.qqdl.site`           | Community hosted                                                                                       |
@@ -64,7 +64,7 @@ Want to add your instance to this list?
 
 ## Disclaimer
 
-- Community instances are not affiliated with the official Monochrome project
+- Community instances are not affiliated with the official MiLey project
 - Use at your own risk
 - Instance availability and performance may vary
 - The official project does not guarantee uptime for community instances
@@ -74,4 +74,4 @@ Want to add your instance to this list?
 ## Related Resources
 
 - [Contributing Guide](CONTRIBUTING.md) - Contribute to the project
-- [Main Repository](https://github.com/monochrome-music/monochrome) - Source code
+- [Main Repository](https://github.com/miley-music/miley) - Source code

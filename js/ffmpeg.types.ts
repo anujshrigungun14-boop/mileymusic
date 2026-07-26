@@ -1,4 +1,4 @@
-export class FfmpegProgress implements MonochromeProgress {
+export class FfmpegProgress implements MiLeyProgress {
     constructor(
         public readonly stage: 'loading' | 'parsing' | 'encoding' | 'finalizing' | 'stdout',
         public readonly progress: number,
