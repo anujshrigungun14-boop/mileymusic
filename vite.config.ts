@@ -1,6 +1,6 @@
 import path from 'path';
 import { defineConfig } from 'vite';
-import { VitePWA } from 'vite-plugin-pwa';
+// import { VitePWA } from 'vite-plugin-pwa';
 import authGatePlugin from './vite-plugin-auth-gate.js';
 import blobAssetPlugin from './vite-plugin-blob.js';
 import svgUse from './vite-plugin-svg-use.js';
@@ -90,6 +90,7 @@ export default defineConfig(({ mode }) => {
             uploadPlugin(),
             blobAssetPlugin(),
             svgUse(),
+            /*
             VitePWA({
                 registerType: 'prompt',
                 devOptions: {
@@ -163,3 +164,4 @@ export default defineConfig(({ mode }) => {
         ],
     };
 });
+*/
