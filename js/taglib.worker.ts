@@ -1,4 +1,4 @@
-// filepath: /workspaces/monochrome/js/taglib.worker.ts
+// filepath: /workspaces/miley/js/taglib.worker.ts
 declare let self: DedicatedWorkerGlobalScope;
 
 import { ByteVector } from '!/@dantheman827/taglib-ts/src/byteVector.js';

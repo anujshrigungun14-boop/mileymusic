@@ -1,16 +1,16 @@
 declare global {
-    type MonochromeProgress<T = object> = {
+    type MiLeyProgress<T = object> = {
         stage: string;
     } & T;
 
-    type MonochromeProgressMessage<_T = MonochromeProgress> = {
+    type MiLeyProgressMessage<_T = MiLeyProgress> = {
         message: string;
     };
 
-    type MonochromeProgressListener<T = MonochromeProgress> = (progress: T) => void;
+    type MiLeyProgressListener<T = MiLeyProgress> = (progress: T) => void;
 }
 
-export class DownloadProgress implements MonochromeProgress {
+export class DownloadProgress implements MiLeyProgress {
     public readonly stage = 'downloading';
 
     constructor(
@@ -32,7 +32,7 @@ export class SegmentedDownloadProgress extends DownloadProgress {
     }
 }
 
-export class ProgressMessage implements MonochromeProgressMessage {
+export class ProgressMessage implements MiLeyProgressMessage {
     constructor(public readonly message: string) {}
 }
 

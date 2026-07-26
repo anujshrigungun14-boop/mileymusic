@@ -79,11 +79,11 @@ class ServerAPI {
         console.error('Failed to load instances from all uptime APIs');
         return [
             'https://hifi.geeked.wtf',
-            'https://eu-central.monochrome.tf',
-            'https://us-west.monochrome.tf',
-            'https://arran.monochrome.tf',
-            'https://api.monochrome.tf',
-            'https://monochrome-api.samidy.com',
+            'https://eu-central.miley.app',
+            'https://us-west.miley.app',
+            'https://arran.miley.app',
+            'https://api.miley.app',
+            'https://miley-api.samidy.com',
             'https://maus.qqdl.site',
             'https://vogel.qqdl.site',
             'https://katze.qqdl.site',
@@ -185,10 +185,10 @@ export async function onRequest(context) {
                 const year = album.releaseDate ? new Date(album.releaseDate).getFullYear() : '';
                 const trackCount = album.numberOfTracks || tracks.length;
 
-                const description = `Album by ${artist} • ${year} • ${trackCount} Tracks\nListen on Monochrome`;
+                const description = `Album by ${artist} • ${year} • ${trackCount} Tracks\nListen on MiLey`;
                 const imageUrl = album.cover
                     ? api.getCoverUrl(album.cover, '1280')
-                    : 'https://monochrome.samidy.com/assets/appicon.png';
+                    : 'https://miley.samidy.com/assets/appicon.png';
                 const pageUrl = new URL(request.url).href;
 
                 const metaHtml = `
@@ -200,7 +200,7 @@ export async function onRequest(context) {
                         <meta name="description" content="${description}">
                         <meta name="theme-color" content="#000000">
 
-                        <meta property="og:site_name" content="Monochrome">
+                        <meta property="og:site_name" content="MiLey">
                         <meta property="og:title" content="${title}">
                         <meta property="og:description" content="${description}">
                         <meta property="og:image" content="${imageUrl}">

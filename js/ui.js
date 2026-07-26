@@ -2975,7 +2975,7 @@ export class UIRenderer {
         container.innerHTML = `<div class="card-grid">${this.createSkeletonCards(12)}</div>`;
 
         try {
-            const response = await fetch('https://hot.monochrome.tf/');
+            const response = await fetch('https://hot.miley.app/');
             if (!response.ok) throw new Error('Failed to load explore data');
             const data = await response.json();
 
@@ -3695,7 +3695,7 @@ export class UIRenderer {
         });
 
         try {
-            const response = await fetch(`https://hot.monochrome.tf/explore/genre/?id=${genreId}`);
+            const response = await fetch(`https://hot.miley.app/explore/genre/?id=${genreId}`);
             if (!response.ok) throw new Error('Failed to load genre data');
             const data = await response.json();
 
@@ -4862,7 +4862,7 @@ export class UIRenderer {
                                 const quote = decodeHtml(review.text || 'No review text available.');
                                 reviewdiv.innerHTML = `
                                 <img crossorigin="anonymous" src="${review.image || ''}" width="50" height="50" style="border-radius:8px;object-fit:cover;background:var(--highlight);flex-shrink:0;"
-                                     onerror="this.src='images/monochrome-logo.svg';this.onerror=null;" loading="lazy" referrerpolicy="no-referrer">
+                                     onerror="this.src='images/miley-logo.svg';this.onerror=null;" loading="lazy" referrerpolicy="no-referrer">
                                 <div style="flex:1;">
                                     <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.25rem;">
                                         <div class="pub-name" style="font-weight:600;color:var(--foreground);"></div>
@@ -5384,7 +5384,7 @@ export class UIRenderer {
                     numberOfTracks: playlistData.tracks ? playlistData.tracks.length : 0,
                     isUserPlaylist: true,
                 });
-                document.title = `${playlistData.name || playlistData.title} - Monochrome`;
+                document.title = `${playlistData.name || playlistData.title} - MiLey`;
 
                 // Setup playlist search
                 this.setupTracklistSearch();
@@ -7193,7 +7193,7 @@ export class UIRenderer {
             trendingContainer.innerHTML = createPlaceholder('Failed to load trending podcasts.');
         }
 
-        document.title = 'Podcasts - Monochrome Music';
+        document.title = 'Podcasts - MiLey Music';
     }
 
     cleanupPodcastState() {
@@ -7239,7 +7239,7 @@ export class UIRenderer {
                 this.podcastState.podcastTitle = 'Unknown Podcast';
             }
 
-            document.title = `${podcastResult?.title || 'Podcast'} - Monochrome Music`;
+            document.title = `${podcastResult?.title || 'Podcast'} - MiLey Music`;
 
             episodesContainer.innerHTML = '';
             await this.loadAllPodcastEpisodes();

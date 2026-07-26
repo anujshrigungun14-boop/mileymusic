@@ -3,7 +3,7 @@ import { SegmentedDownloadProgress } from './progressEvents';
 import { getProxyUrl } from './proxy-utils';
 
 export interface DashDownloadOptions {
-    onProgress?: MonochromeProgressListener<SegmentedDownloadProgress>;
+    onProgress?: MiLeyProgressListener<SegmentedDownloadProgress>;
     signal?: AbortSignal;
     calculateDashBytes?: boolean;
 }

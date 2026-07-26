@@ -3,7 +3,7 @@
 import { SVG_RIGHT_ARROW } from './icons';
 
 export const apiSettings = {
-    STORAGE_KEY: 'monochrome-api-instances-v9',
+    STORAGE_KEY: 'miley-api-instances-v9',
     INSTANCES_URLS: ['https://tidal-uptime.geeked.wtf'],
     defaultInstances: { api: [], streaming: [], qobuz: [] },
     userInstances: null,
@@ -13,7 +13,7 @@ export const apiSettings = {
     _loadUserInstances() {
         if (this.userInstances) return this.userInstances;
         try {
-            const stored = localStorage.getItem('monochrome-user-api-instances-v1');
+            const stored = localStorage.getItem('miley-user-api-instances-v1');
             const parsed = stored ? JSON.parse(stored) : { api: [], streaming: [], qobuz: [] };
             if (!parsed.qobuz) parsed.qobuz = [];
             this.userInstances = parsed;
@@ -24,7 +24,7 @@ export const apiSettings = {
     },
 
     _saveUserInstances() {
-        localStorage.setItem('monochrome-user-api-instances-v1', JSON.stringify(this.userInstances));
+        localStorage.setItem('miley-user-api-instances-v1', JSON.stringify(this.userInstances));
     },
 
     async loadInstancesFromGitHub() {
@@ -77,10 +77,10 @@ export const apiSettings = {
                 this.defaultInstances = {
                     api: [
                         { url: 'https://hifi.geeked.wtf', version: '2.7' },
-                        { url: 'https://eu-central.monochrome.tf', version: '2.7' },
-                        { url: 'https://us-west.monochrome.tf', version: '2.7' },
-                        { url: 'https://api.monochrome.tf', version: '2.5' },
-                        { url: 'https://monochrome-api.samidy.com', version: '2.3' },
+                        { url: 'https://eu-central.miley.app', version: '2.7' },
+                        { url: 'https://us-west.miley.app', version: '2.7' },
+                        { url: 'https://api.miley.app', version: '2.5' },
+                        { url: 'https://miley-api.samidy.com', version: '2.3' },
                         { url: 'https://maus.qqdl.site', version: '2.6' },
                         { url: 'https://vogel.qqdl.site', version: '2.6' },
                         { url: 'https://katze.qqdl.site', version: '2.6' },
@@ -272,7 +272,7 @@ export const apiSettings = {
     },
 };
 export const recentActivityManager = {
-    STORAGE_KEY: 'monochrome-recent-activity',
+    STORAGE_KEY: 'miley-recent-activity',
     LIMIT: 10,
 
     _get() {
@@ -325,13 +325,13 @@ export const recentActivityManager = {
 };
 
 export const themeManager = {
-    STORAGE_KEY: 'monochrome-theme',
-    CUSTOM_THEME_KEY: 'monochrome-custom-theme',
+    STORAGE_KEY: 'miley-theme',
+    CUSTOM_THEME_KEY: 'miley-custom-theme',
 
     defaultThemes: {
         light: {},
         dark: {},
-        monochrome: {},
+        miley: {},
         ocean: {},
         purple: {},
         forest: {},
@@ -354,7 +354,7 @@ export const themeManager = {
 
         if (theme === 'system') {
             const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            document.documentElement.setAttribute('data-theme', isDark ? 'monochrome' : 'white');
+            document.documentElement.setAttribute('data-theme', isDark ? 'miley' : 'white');
         } else {
             document.documentElement.setAttribute('data-theme', theme);
         }
@@ -2097,7 +2097,7 @@ export const settingsUiState = {
 };
 
 export const queueManager = {
-    STORAGE_KEY: 'monochrome-queue',
+    STORAGE_KEY: 'miley-queue',
 
     getQueue() {
         try {
@@ -2127,7 +2127,7 @@ export const queueManager = {
 };
 
 export const sidebarSettings = {
-    STORAGE_KEY: 'monochrome-sidebar-collapsed',
+    STORAGE_KEY: 'miley-sidebar-collapsed',
 
     isCollapsed() {
         try {
@@ -2700,17 +2700,17 @@ export const sidebarSectionSettings = {
 if (typeof window !== 'undefined' && window.matchMedia) {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
         if (themeManager.getTheme() === 'system') {
-            document.documentElement.setAttribute('data-theme', e.matches ? 'monochrome' : 'white');
+            document.documentElement.setAttribute('data-theme', e.matches ? 'miley' : 'white');
         }
     });
 }
 
 export const fontSettings = {
-    STORAGE_KEY: 'monochrome-font-config-v2',
-    CUSTOM_FONTS_KEY: 'monochrome-custom-fonts',
-    FONT_SIZE_KEY: 'monochrome-font-size',
-    FONT_LINK_ID: 'monochrome-dynamic-font',
-    FONT_FACE_ID: 'monochrome-dynamic-fontface',
+    STORAGE_KEY: 'miley-font-config-v2',
+    CUSTOM_FONTS_KEY: 'miley-custom-fonts',
+    FONT_SIZE_KEY: 'miley-font-size',
+    FONT_LINK_ID: 'miley-dynamic-font',
+    FONT_FACE_ID: 'miley-dynamic-fontface',
     NOTO_FALLBACK:
         "'Noto Sans', 'Noto Sans SC', 'Noto Sans TC', 'Noto Sans HK', 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans Hebrew', 'Noto Sans Arabic', 'Noto Sans Devanagari', 'Noto Sans Bengali', 'Noto Sans Thai', 'Noto Sans Tamil', 'Noto Sans Telugu', 'Noto Sans Gujarati', 'Noto Sans Kannada', 'Noto Sans Malayalam', 'Noto Sans Sinhala', 'Noto Sans Khmer', 'Noto Sans Lao', 'Noto Sans Myanmar', 'Noto Sans Georgian', 'Noto Sans Armenian', 'Noto Sans Ethiopic', system-ui, sans-serif",
 
@@ -2978,7 +2978,7 @@ export const fontSettings = {
     },
 
     loadAppleMusicFont() {
-        const APPLE_FONT_LINK_ID = 'monochrome-apple-font';
+        const APPLE_FONT_LINK_ID = 'miley-apple-font';
 
         // Remove any existing dynamic font links
         let existingLink = document.getElementById(this.FONT_LINK_ID);

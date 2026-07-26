@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-        <string>monochrome</string>
+        <string>miley</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -22,10 +22,10 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>monochrome.oauth</string>
+			<string>miley.oauth</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>monochrome</string>
+				<string>miley</string>
 			</array>
 		</dict>
 	</array>

@@ -76,12 +76,12 @@ class ServerAPI {
 
         console.error('Failed to load instances from all uptime APIs');
         return [
-            'https://eu-central.monochrome.tf',
-            'https://us-west.monochrome.tf',
-            'https://arran.monochrome.tf',
+            'https://eu-central.miley.app',
+            'https://us-west.miley.app',
+            'https://arran.miley.app',
             'https://triton.squid.wtf',
-            'https://api.monochrome.tf',
-            'https://monochrome-api.samidy.com',
+            'https://api.miley.app',
+            'https://miley-api.samidy.com',
             'https://maus.qqdl.site',
             'https://vogel.qqdl.site',
             'https://katze.qqdl.site',
@@ -154,10 +154,10 @@ export async function onRequest(context) {
         if (artist && (artist.name || artist.title)) {
             try {
                 const name = artist.name || artist.title;
-                const description = `Listen to ${name} on Monochrome`;
+                const description = `Listen to ${name} on MiLey`;
                 const imageUrl = artist.picture
                     ? api.getArtistPictureUrl(artist.picture, '750')
-                    : 'https://monochrome.samidy.com/assets/appicon.png';
+                    : 'https://miley.samidy.com/assets/appicon.png';
                 const pageUrl = new URL(request.url).href;
 
                 const metaHtml = `
@@ -169,7 +169,7 @@ export async function onRequest(context) {
                         <meta name="description" content="${description}">
                         <meta name="theme-color" content="#000000">
 
-                        <meta property="og:site_name" content="Monochrome">
+                        <meta property="og:site_name" content="MiLey">
                         <meta property="og:title" content="${name}">
                         <meta property="og:description" content="${description}">
                         <meta property="og:image" content="${imageUrl}">

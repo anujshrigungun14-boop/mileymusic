@@ -61,12 +61,12 @@ jobs:
                               label = m.group(1).strip()
                               break
 
-                  # Copy current picks to archive, replacing monochrome URLs with UUIDs
+                  # Copy current picks to archive, replacing miley URLs with UUIDs
                   with open("public/editors-picks.json") as f:
                       current = json.load(f)
 
                   # Replace cover URLs with original UUIDs (handles both legacy and intermediate formats)
-                  url_pattern1 = re.compile(r'^https://monochrome\.tf/editors-picks-images/([a-f0-9-]+)\.webp$')
+                  url_pattern1 = re.compile(r'^https://miley\.tf/editors-picks-images/([a-f0-9-]+)\.webp$')
                   url_pattern2 = re.compile(r'^https://wsrv\.nl/\?url=https://resources\.tidal\.com/images/([a-f0-9/]+)/320x320\.jpg&w=250&h=250&output=webp$')
                   for item in current:
                       for field in ['cover', 'picture', 'image']:

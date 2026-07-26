@@ -2,7 +2,7 @@
 
 ## Quick Start
 
-### Monochrome Only
+### MiLey Only
 
 ```bash
 docker compose up -d
@@ -28,21 +28,21 @@ Docker Compose [profiles](https://docs.docker.com/compose/how-tos/profiles/) con
 
 | Command                                                   | What starts                          |
 | --------------------------------------------------------- | ------------------------------------ |
-| `docker compose up -d`                                    | Monochrome                           |
-| `docker compose --profile pocketbase up -d`               | Monochrome + PocketBase              |
-| `docker compose --profile dev up -d`                      | Monochrome + Dev server              |
-| `docker compose --profile dev --profile pocketbase up -d` | Monochrome + Dev server + PocketBase |
+| `docker compose up -d`                                    | MiLey                           |
+| `docker compose --profile pocketbase up -d`               | MiLey + PocketBase              |
+| `docker compose --profile dev up -d`                      | MiLey + Dev server              |
+| `docker compose --profile dev --profile pocketbase up -d` | MiLey + Dev server + PocketBase |
 
 In `docker-compose.yml`, it looks like this:
 
 ```yaml
 services:
-    monochrome: # no profile -- always starts
+    miley: # no profile -- always starts
 
     pocketbase:
         profiles: ['pocketbase'] # opt-in
 
-    monochrome-dev:
+    miley-dev:
         profiles: ['dev'] # opt-in
 ```
 
@@ -85,7 +85,7 @@ services:
         ports:
             - '4000:4000'
         networks:
-            - monochrome-network
+            - miley-network
 ```
 
 Override files can extend existing services (add labels, env vars, networks) and define entirely new services. See the [Docker docs](https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/) for the full merge behavior.
@@ -98,17 +98,17 @@ The application is configured via environment variables. Copy `.env.example` to 
 
 ### Authentication (Appwrite)
 
-Monochrome uses Appwrite for user authentication. While it defaults to official instances, you can use your own self-hosted Appwrite instance:
+MiLey uses Appwrite for user authentication. While it defaults to official instances, you can use your own self-hosted Appwrite instance:
 
 1. Create a project in Appwrite.
 2. Enable the **Google** or **Email/Password** providers in the Appwrite Console.
 3. Set these variables in your `.env`:
     - `APPWRITE_ENDPOINT`: Your Appwrite API endpoint (e.g., `https://auth.yourdomain.com/v1`).
-    - `APPWRITE_PROJECT_ID`: Your Appwrite project ID (e.g., `auth-for-monochrome`).
+    - `APPWRITE_PROJECT_ID`: Your Appwrite project ID (e.g., `auth-for-miley`).
 
 ### Database (PocketBase)
 
-Monochrome uses PocketBase to store user data (playlists, favorites, profiles, etc.). You can run it alongside Monochrome using the `pocketbase` profile:
+MiLey uses PocketBase to store user data (playlists, favorites, profiles, etc.). You can run it alongside MiLey using the `pocketbase` profile:
 
 ```bash
 docker compose --profile pocketbase up -d

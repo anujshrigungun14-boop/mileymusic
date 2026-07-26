@@ -1,13 +1,11 @@
-<svg
-    class="app-logo"
-    xmlns="http://www.w3.org/2000/svg"
-    width="200"
-    height="200"
-    viewBox="14.75 14.75 70.5 70.5"
->
-    <g fill="currentColor">
-        <path
-            d="M38.25 14.75H85.25V61.75H61.75V38.25H38.25ZM14.75 38.25H38.25V61.75H61.75V85.25H14.75Z"
-        />
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="mileyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="256" cy="256" r="240" fill="url(#mileyGrad)"/>
+  <path d="M180 340V172l80 60 80-60v168h-48V236l-32 24-32-24v104h-48z" fill="white"/>
+  <text x="256" y="420" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">MiLey</text>
 </svg>

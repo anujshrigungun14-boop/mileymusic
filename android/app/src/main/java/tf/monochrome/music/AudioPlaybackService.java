@@ -1,4 +1,4 @@
-package tf.monochrome.music;
+package tf.miley.music;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -93,7 +93,7 @@ public class AudioPlaybackService extends Service {
         );
 
         return new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setContentTitle("Monochrome")
+                .setContentTitle("MiLey")
                 .setContentText("Playing audio")
                 .setSmallIcon(android.R.drawable.ic_media_play)
                 .setContentIntent(pendingIntent)
@@ -111,7 +111,7 @@ public class AudioPlaybackService extends Service {
             if (pm != null) {
                 wakeLock = pm.newWakeLock(
                         PowerManager.PARTIAL_WAKE_LOCK,
-                        "monochrome:audio_playback"
+                        "miley:audio_playback"
                 );
                 // 4-hour timeout as a safety net to prevent battery drain
                 // if the service is accidentally left running

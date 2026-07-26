@@ -1,6 +1,6 @@
-# Contributing to Monochrome
+# Contributing to MiLey
 
-Thank you for your interest in contributing to Monochrome! This guide will help you get started with development, understand our codebase, and follow our contribution workflow.
+Thank you for your interest in contributing to MiLey! This guide will help you get started with development, understand our codebase, and follow our contribution workflow.
 
 ---
 
@@ -30,8 +30,8 @@ Thank you for your interest in contributing to Monochrome! This guide will help 
 2. clone the repository:
 
     ```bash
-    git clone https://github.com/YOUR_USERNAME/monochrome.git
-    cd monochrome
+    git clone https://github.com/YOUR_USERNAME/miley.git
+    cd miley
     ```
 
 3. Install dependencies:
@@ -115,7 +115,7 @@ To ensure a smooth contribution process and avoid wasted effort, please adhere t
 
 ### Consult on Major Features
 
-If you're looking into contributing a big feature, please speak with us before starting work. You might be implementing something we are already working on, or a feature that could create more issues long-term. You can reach us via a [GitHub Issue](https://github.com/monochrome-music/monochrome/issues) or on our **[Discord](https://monochrome.tf/discord)**.
+If you're looking into contributing a big feature, please speak with us before starting work. You might be implementing something we are already working on, or a feature that could create more issues long-term. You can reach us via a [GitHub Issue](https://github.com/miley-music/miley/issues) or on our **[Discord](https://miley.app/discord)**.
 
 ### Open Draft PRs Early
 
@@ -138,11 +138,11 @@ Whether you've spoken with us or not, we highly recommend opening **Draft Pull R
 - Submitting code you don't actually understand or haven't tested.
 - Ignoring edge cases because the AI didn't suggest them.
 
-> :warning:: If we can verify that a Pull Request is just unvetted AI/Vibecoded Work, **it will be automatically closed without review.** If you can't explain your code, it doesn't belong in Monochrome.
+> :warning:: If we can verify that a Pull Request is just unvetted AI/Vibecoded Work, **it will be automatically closed without review.** If you can't explain your code, it doesn't belong in MiLey.
 
 ### No Hard Feelings
 
-If we end up closing your Pull Request, please don't feel bad about it! We **really appreciate** you taking the time to help out with Monochrome.
+If we end up closing your Pull Request, please don't feel bad about it! We **really appreciate** you taking the time to help out with MiLey.
 
 There are a lot of reasons why we might close a PR, and most of them have nothing to do with you. It might be because:
 
@@ -297,7 +297,7 @@ Deployment is fully automated via **Cloudflare Pages**.
 The project uses a **relative base path** (`./`) in `vite.config.js`. This allows the same build artifact to work on both:
 
 - **Cloudflare Pages** (served from root)
-- **GitHub Pages** (served from `/monochrome/`)
+- **GitHub Pages** (served from `/miley/`)
 
 Hash routing is used to ensure compatibility across all hosting platforms.
 
@@ -321,4 +321,4 @@ bun run build
 - Focus on constructive feedback
 - Respect different viewpoints and experiences
 
-Thank you for contributing to Monochrome!
+Thank you for contributing to MiLey!
